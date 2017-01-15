@@ -1,0 +1,11 @@
+<pf-tabs #pfTabs class="nav navbar-nav navbar-primary" (tabChanged)="onTabChanged($event)">
+  <pf-tab [tabTitle]="tabs[0].title" [attr.active]="tabs[0].isActive ? true : null">
+    <app-cards></app-cards>
+  </pf-tab>
+  <pf-tab [tabTitle]="tabs[1].title" [attr.active]="tabs[1].isActive ? true: null">
+    <app-list-view></app-list-view>
+  </pf-tab>
+  <pf-tab [tabTitle]="tabs[2].title" [attr.active]="tabs[2].isActive ? true : null">
+    <app-empty-state (onActionClick)="onActionClick($event)"></app-empty-state>
+  </pf-tab>
+</pf-tabs>
